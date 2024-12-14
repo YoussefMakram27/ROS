@@ -1,0 +1,43 @@
+<link name = "right_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder radius = "${wheel_radius}" length = "${wheel_length}" />
+            </geometry>
+            <origin xyz = "0 0 0" rpy = "${pi / 2.0} 0 0" />
+            <material name = "grey" />
+        </visual>
+        <xacro:cylinder_inertia m ="1.0" r="${wheel_radius}" h="${wheel_length}" xyz=" 0 0 0" rpy="${pi / 2.0} 0 0" />
+    </link>
+
+    <link name = "left_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder radius = "${wheel_radius}" length = "${wheel_length}" />
+            </geometry>
+            <origin xyz = "0 0 0" rpy = "${pi / 2.0} 0 0" />
+            <material name = "grey" />
+        </visual>
+        <xacro:cylinder_inertia m ="1.0" r="${wheel_radius}" h="${wheel_length}" xyz=" 0 0 0" rpy="${pi / 2.0} 0 0" />
+    </link>
+
+    <link name = "right_front_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder radius = "${wheel_radius}" length = "${wheel_length}" />
+            </geometry>
+            <origin xyz = "0 0 0" rpy = "1.57 0 0" />
+            <material name = "grey" />
+        </visual>
+        <xacro:cylinder_inertia m ="1.0" r="${wheel_radius}" h="${wheel_length}" xyz=" 0 0 0" rpy="${pi / 2.0} 0 0" />
+    </link>
+
+    <link name = "left_front_wheel_link">
+        <visual>
+            <geometry>
+                <cylinder radius = "${wheel_radius}" length = "${wheel_length}" />
+            </geometry>
+            <origin xyz = "0 0 0" rpy = "1.57 0 0" />
+            <material name = "grey" />
+        </visual>
+        <xacro:cylinder_inertia m ="1.0" r="${wheel_radius}" h="${wheel_length}" xyz=" 0 0 0" rpy="${pi / 2.0} 0 0" />
+    </link>

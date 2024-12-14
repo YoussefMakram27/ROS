@@ -1,0 +1,7 @@
+Ros wiki adding physical and collision properties to a URDF model:
+	https://wiki.ros.org/urdf/Tutorials/Adding%20Physical%20and%20Collision%20Properties%20to%20a%20URDF%20Model
+	
+List of 3d inertia tensors:
+	https://en.wikipedia.org/wiki/List_of_moments_of_inertia#List_of_3D_inertia_tensors
+	
+		

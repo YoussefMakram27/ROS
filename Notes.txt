@@ -1,0 +1,205 @@
+
+*******************************************
+
+----------
+
+-----------------
+
+------------------
+
+
+------------------------
+
+-------------------------------------
+
+--------------------------------------
+
+-------------------------------------
+
+-----------------------------------
+# to install the node
+entry_points={
+        'console_scripts': [
+            "py_node = my_py_pkg.my_first_node:main"
+        ],
+    },
+after this you go to terminal, then "colcon build' in the work space, and find the py_node and run it
+# don't forget to source
+OR
+ros2 run my_py_pkg py_node
+----------------------------------
+# A good node
+in python package you add the new nodes in the package dir, for instance "my_py_pkg"
+but
+in cpp package, you add the new nodes in src inside the package dir, for instance "my_cpp_pkg/src/"
+================
+packages of ros will be installed in /opt/ros/humble/include
+=========================
+ros2 run (-h) # help for any code
+
+ros2 node list  # list all running nodes
+ros2 node info /py_test  # info about the node (only of it is running)
+--------------------------
+Let's break down the difference between py_test, py_node, and my_first_node in your ROS 2 setup:
+
+1. py_node (from setup.py: entry_points)
+In your setup.py file, you define an entry point for your Python node with this line:
+
+python
+Copy code
+'console_scripts': [
+    "py_node = my_py_pkg.my_first_node:main"
+]
+py_node: This is the command you use to run the node when using ros2 run my_py_pkg py_node.
+It links to the script or function my_first_node.py in your package my_py_pkg.
+py_node is the alias or command you defined in setup.py. When you run:
+bash
+Copy code
+ros2 run my_py_pkg py_node
+It starts the node by calling the main() function in the my_first_node.py script.
+2. my_first_node (from my_py_pkg)
+my_first_node is the actual Python script or module inside your package my_py_pkg (located in my_py_pkg/my_first_node.py).
+It contains the implementation of your node.
+The :main at the end of the entry point indicates that the main function in my_first_node is executed when you run py_node.
+3. py_test (Node name in the code)
+In your node class:
+
+python
+Copy code
+class MyNode(Node):
+    def __init__(self):
+        super().__init__('py_test')
+py_test: This is the actual name of the node as seen by ROS 2 when it is running. The name py_test is passed to super().__init__() when you initialize the node, and it becomes the registered node name within the ROS system.
+Why the Difference in Commands?
+When running the node:
+
+You use ros2 run my_py_pkg py_node because py_node is the alias defined in your setup.py for running the node. This runs the my_first_node script and starts the node.
+When checking node info:
+
+When you use ros2 node info py_test, you are referring to the name of the node in the ROS 2 system (defined as 'py_test' in your class). This is how ROS recognizes and registers the node after it starts.
+Summary of Differences:
+py_node: Alias or command defined in setup.py for running the node.
+my_first_node: Python script (in my_py_pkg) that contains your node implementation.
+py_test: Actual node name in the ROS 2 network, as defined in the super().__init__('py_test') call.
+Each term serves a different purpose: one for launching, one for the file/module name, and one for the node's identification in the ROS network.
+
+Let me know if you need more clarification!
+---------------------
+don't run two nodes with the same name at the same time
+-------------
+change the name of the node at run time
+
+~~~~~~~~~~~~~~~~~~~ros2 run my_py_pkg py_node --ros-args -r __node:=ahmed
+
+change the name of the topic at run time
+~~~~~~~~~~~~~~~~~~~ros2 run my_py_pkg py_node --ros-args -r robot_news:=ahmed
+
+----------------------
+# if you write this, you don't have to compile your file every time (it is only for python)
+colcon build --packages-select my_py_packages --symlink-install
+-----------------
+~~~~~~~~~~~~~~~~~~~~~rqt --> is a Gui debug tool for your graph, to debug your node and other things (it is a node)
+-----------------
+~~~~~~~~~~~~~~~~~~~~~chmod +x file_name.py  # to make it executable
+-----------------
+~~~~~~~~~~~~~~~~~~~~~ros2 node list # list all running nodes
+~~~~~~~~~~~~~~~~~~~~~ros2 node info /robot_news_station # info about this node
+~~~~~~~~~~~~~~~~~~~~~ros2 topic list # list all running topics
+~~~~~~~~~~~~~~~~~~~~~ros2 topic echo /robot_news_station # to view the message being published
+===============
+~~~~~~~~~~~~~~~~~~~~~ros2 interfaces show example_interfaces/msg/Int64 # info about it
+=================================
+
+I'm glad it worked! When logging messages in ROS 2 using rclpy, the logger function expects strings. Therefore, if you want to log integers (or other non-string types), you need to convert them to strings explicitly.
+
+Why Convert to String?
+Logging Function Expectation: The logging functions are designed to handle string messages. If you pass an integer directly, it may not be interpreted correctly, leading to a type error like the one you encountered.
+String Formatting: Converting to a string allows for flexible and readable logging. You can include variables in a log message in a way that's easy to read and understand.
+
+================
+
+~~~~~~~~~~ros2 interface show example_interfaces/srv/AddTwoInts  # display example for ros2 service
+
+------------ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts "{a: 3, b: 4}" call service
+
+============================
+future = self.client_.call_async(self.request)
+        future.add_done_callback()
+ChatGPT said:
+ChatGPT
+In this snippet, you are using call_async to make an asynchronous service request with a ROS 2 client. Let's break down what each part of the code does:
+
+1. self.client_.call_async(self.request):
+Asynchronous Call:
+call_async sends an asynchronous request to the service. This means that the function will not wait for the service to respond immediately, allowing the rest of the program to continue executing while waiting for the response.
+The self.client_ is your client (in this case, a service client for the AddTwoInts service), and self.request is the request message you are sending to the service.
+Returns a Future Object:
+This method returns a future object (future in your code), which will hold the result of the asynchronous service call once the service has completed processing the request.
+2. future.add_done_callback():
+Callback Function:
+After initiating the asynchronous call, you use add_done_callback() on the future object to attach a callback function. This function will be executed once the service call is completed and the future is "done."
+The purpose of this is to handle the response (or any errors) when the asynchronous task is finished.
+You need to pass the name of a function that will handle the result of the service call. This function will be automatically invoked when the service responds.
+
+why i have to use add done callback
+why i can't just write the try except lines after call async direct
+ChatGPT said:
+ChatGPT
+You can’t write the try-except block directly after the call_async call because call_async returns a future object, and the service call is performed asynchronously. The program doesn't wait for the result immediately after calling call_async. Here’s why:
+
+Why You Need add_done_callback:
+Asynchronous Nature:
+
+When you use call_async, it returns immediately with a future object, but the actual request to the service happens in the background, and the result will be available later.
+If you try to get the result (future.result()) immediately after call_async, the result will not be ready yet. The future is still "in progress."
+Callback to Handle the Result:
+
+Since you don’t know exactly when the service will respond, add_done_callback is used to specify a function that should be called once the service call completes (i.e., when the result becomes available).
+The callback is a way to tell the program, "When the result is ready, execute this function."
+What Happens if You Try try-except Directly:
+If you try something like this:
+
+python
+Copy code
+future = self.client_.call_async(self.request)
+try:
+    response = future.result()  # Trying to get result right after call_async
+    self.get_logger().info(f"{self.request.a} + {self.request.b} = {response.sum}")
+except Exception as e:
+    self.get_logger().error(f"Service call failed: {e}")
+This will likely raise an exception because the result is not ready immediately. future.result() will block the program until the result is available, effectively making it synchronous. So, the code will "wait" for the result and defeat the purpose of calling call_async in the first place.
+
+===========================================================================
+TF 
+
+ros2 run tf2_tools view_frames
+ros2 launch urdf_tutorial display.launch.py model:=/opt/ros/humble/share/urdf_tutorial/urdf/08-macroed.urdf.xacro
+
+ros2 param list /robot_state_publisher
+ros2 param get /robot_state_publisher robot_description 
+
+ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(xacro /home/youssef/Documents/ROS/Robot/my_robot.urdf)"
+
+ros2 run joint_state_publisher_gui joint_state_publisher_gui
+
+ros2 run rviz2 rviz2
+
+<launch>
+    <let name="urdf_path" 
+         value="$(find-pkg-share my_robot_description)/urdf/my_robot.urdf" />
+
+    <node pkg="robot_state_publisher" exec="robot_state_publisher">
+        <param name="robot_description"
+               value="$(command 'xacro $(var urdf_path)')" />
+    </node>
+    
+    <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui" /> 
+
+    <node pkg="rviz2" exec="rviz2" output="screen" />
+</launch>
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup/CMakeFiles/uninstall.dir
+/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup/CMakeFiles/my_robot_bringup_uninstall.dir
+/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup/CMakeFiles/test.dir
+/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup/CMakeFiles/edit_cache.dir
+/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup/CMakeFiles/rebuild_cache.dir
+/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup/CMakeFiles/list_install_components.dir
+/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup/CMakeFiles/install.dir
+/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup/CMakeFiles/install/local.dir
+/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup/CMakeFiles/install/strip.dir

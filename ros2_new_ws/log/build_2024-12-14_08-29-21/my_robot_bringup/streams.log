@@ -1,0 +1,42 @@
+[0.099s] Invoking command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/youssef/Documents/ROS/ros2_new_ws/src/my_robot_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup
+[2.192s] -- The C compiler identification is GNU 11.4.0
+[4.427s] -- The CXX compiler identification is GNU 11.4.0
+[5.059s] -- Detecting C compiler ABI info
+[6.122s] -- Detecting C compiler ABI info - done
+[6.131s] -- Check for working C compiler: /usr/bin/cc - skipped
+[6.132s] -- Detecting C compile features
+[6.176s] -- Detecting C compile features - done
+[6.203s] -- Detecting CXX compiler ABI info
+[6.373s] -- Detecting CXX compiler ABI info - done
+[6.383s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[6.383s] -- Detecting CXX compile features
+[6.383s] -- Detecting CXX compile features - done
+[6.497s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[7.194s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[8.015s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[9.404s] -- Configuring done
+[9.427s] -- Generating done
+[9.433s] -- Build files have been written to: /home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup
+[9.445s] Invoked command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/youssef/Documents/ROS/ros2_new_ws/src/my_robot_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup
+[9.448s] Invoking command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup -- -j8 -l8
+[9.485s] Invoked command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup -- -j8 -l8
+[9.486s] Invoking command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup
+[9.493s] -- Install configuration: ""
+[9.493s] -- Execute custom install script
+[9.493s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup//launch/my_robot_gazebo.launch.xml
+[9.502s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/ament_index/resource_index/package_run_dependencies/my_robot_bringup
+[9.510s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/ament_index/resource_index/parent_prefix_path/my_robot_bringup
+[9.518s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.sh
+[9.526s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.dsv
+[9.533s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.sh
+[9.540s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.dsv
+[9.547s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.bash
+[9.554s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.sh
+[9.561s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.zsh
+[9.568s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.dsv
+[9.576s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/package.dsv
+[9.583s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/ament_index/resource_index/packages/my_robot_bringup
+[9.590s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig.cmake
+[9.597s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig-version.cmake
+[9.606s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_bringup/share/my_robot_bringup/package.xml
+[9.615s] Invoked command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_bringup

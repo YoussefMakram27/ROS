@@ -1,0 +1,104 @@
+int main(int argc, char **argv)
+{
+    
+    return 0;
+}
+In the context of C or C++ programs, argc and argv are parameters passed to the main function, which allow the program to handle command-line arguments.
+
+int argc: Argument count. This represents the number of command-line arguments passed to the program, including the name of the program itself. For example, if the program is run with:
+
+bash
+Copy code
+./my_program arg1 arg2
+Here, argc would be 3 (./my_program, arg1, and arg2).
+
+char **argv: Argument vector. This is an array of C-strings (i.e., char*), where each element is one of the command-line arguments passed to the program. The first element (argv[0]) is the name of the program, and the following elements (argv[1], argv[2], etc.) are the actual arguments passed.
+
+For example, if you run:
+
+bash
+Copy code
+./my_program hello world
+argc will be 3.
+argv[0] will be "./my_program".
+argv[1] will be "hello".
+argv[2] will be "world".
+-----------------
+The line of code:
+
+cpp
+Copy code
+auto node = std::make_shared<rclcpp::Node>("Cpp_test");
+is creating a shared pointer to a new ROS 2 node in C++. Here's an illustration of what this line does:
+
+Key Components:
+auto:
+
+Automatically deduces the type of the variable node based on the result of std::make_shared<rclcpp::Node>. In this case, it will be std::shared_ptr<rclcpp::Node>, which is a shared pointer to a Node object.
+std::make_shared<rclcpp::Node>("Cpp_test"):
+
+This creates a shared pointer to an instance of the rclcpp::Node class. The "Cpp_test" string is passed as an argument to the Node constructor, setting the name of the node to "Cpp_test".
+rclcpp::Node:
+
+This is a class in ROS 2 representing a node, which is a process that can communicate with other nodes in a ROS system.
+What Happens:
+Node Creation: A new instance of the rclcpp::Node class is created, and its name is set to "Cpp_test".
+Shared Pointer: The std::make_shared function creates a smart pointer of type std::shared_ptr that manages the lifetime of the Node object. A shared pointer allows multiple parts of the program to share ownership of the object. The Node will be automatically destroyed when no more shared pointers point to it.
+Usage: The node can now be used to access methods and functionality of the rclcpp::Node class, such as creating publishers, subscribers, timers, etc.
+Illustration:
+Imagine that rclcpp::Node is like creating a car:
+
+Car Creation: You're making a new car and giving it a name ("Cpp_test").
+Ownership Sharing: The car (node) is managed by multiple drivers (shared pointers), and it will only be destroyed when no driver (shared pointer) owns it anymore.
+In summary, this line efficiently creates and manages a ROS 2 node instance with a shared pointer, ensuring proper memory management in a multi-owner environment.
+------------------------
+The lines:
+
+cmake
+Copy code
+add_executable(cpp_node src/my_first_node.cpp)
+ament_target_dependencies(cpp_node rclcpp REQUIRED)
+are part of a CMakeLists.txt file, commonly used to build a ROS 2 C++ package. Here’s what each line means:
+
+1. add_executable(cpp_node src/my_first_node.cpp)
+add_executable: This CMake command tells the build system to compile the C++ source file src/my_first_node.cpp and create an executable named cpp_node.
+cpp_node: This is the name of the output executable. After compilation, you can run this node using this name (e.g., ros2 run your_package cpp_node).
+src/my_first_node.cpp: This is the path to the C++ source file you are compiling.
+2. ament_target_dependencies(cpp_node rclcpp REQUIRED)
+ament_target_dependencies: This CMake macro sets the dependencies for the target (in this case, cpp_node) using the ROS 2 ament build system.
+cpp_node: Refers to the executable target that you defined earlier with add_executable.
+rclcpp: Specifies that the target (cpp_node) depends on the rclcpp library, which is the core C++ library for ROS 2.
+REQUIRED: Ensures that this dependency is mandatory. If the rclcpp library is not found, the build will fail.
+Meaning:
+Building the node: These lines tell CMake to compile your C++ source file (src/my_first_node.cpp) into an executable (cpp_node).
+Linking with ROS 2: The ament_target_dependencies line ensures that your node links to the necessary ROS 2 libraries (in this case, rclcpp) so it can access ROS 2 functionality like creating publishers, subscribers, and nodes.
+Full Workflow:
+You write a ROS 2 node in src/my_first_node.cpp.
+CMake builds this file into an executable called cpp_node.
+cpp_node is linked to ROS 2 libraries (like rclcpp), which allow your code to interact with ROS 2 services and topics.
+This ensures your code is properly compiled and can interact with the ROS 2 ecosystem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
