@@ -4,4 +4,8 @@ Ros wiki adding physical and collision properties to a URDF model:
 List of 3d inertia tensors:
 	https://en.wikipedia.org/wiki/List_of_moments_of_inertia#List_of_3D_inertia_tensors
 	
-		
+Gazebo Plugins GitHub:
+	https://github.com/ros-simulation/gazebo_ros_pkgs/tree/ros2/gazebo_plugins/include/gazebo_plugins
+	
+Gazebo Plugins Docs:
+	https://classic.gazebosim.org/tutorials?tut=ros_gzplugins			
