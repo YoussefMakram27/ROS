@@ -47,4 +47,31 @@
         </plugin>
     </gazebo>
 
+    <gazebo>
+        <plugin name="diff_front_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+            <!-- Update rate in Hz -->
+            <update_rate>50</update_rate>
+
+            <!-- wheels -->
+            <left_joint>base_left_front_wheel_joint</left_joint>
+            <right_joint>base_right_front_wheel_joint</right_joint>
+
+            <!-- kinematics -->
+            <wheel_separation>0.45</wheel_separation> <!--it is the distance between the center of two wheels,
+            which is "base_width + wheel_length" ).4 + 0.05-->
+            <wheel_diameter>0.2</wheel_diameter>
+
+            <!-- output -->
+            <publish_odom>true</publish_odom> <!-- where the robot is compared to the origin-->
+            <publish_odom_tf>true</publish_odom_tf>
+            <publish_wheel_tf>true</publish_wheel_tf>
+
+            <odometry_topic>odom</odometry_topic>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_footprint_link</robot_base_frame>
+
+        </plugin>
+    </gazebo>
+
 </robot>

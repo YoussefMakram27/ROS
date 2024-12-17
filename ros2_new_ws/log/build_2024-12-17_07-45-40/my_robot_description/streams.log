@@ -1,0 +1,35 @@
+[0.273s] Invoking command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/youssef/Documents/ROS/ros2_new_ws/src/my_robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description
+[1.140s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.135s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.689s] -- Configuring done
+[2.736s] -- Generating done
+[2.743s] -- Build files have been written to: /home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description
+[2.751s] Invoked command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake /home/youssef/Documents/ROS/ros2_new_ws/src/my_robot_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description
+[2.758s] Invoking command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description -- -j8 -l8
+[2.878s] Invoked command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --build /home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description -- -j8 -l8
+[2.889s] Invoking command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description
+[2.897s] -- Install configuration: ""
+[2.897s] -- Execute custom install script
+[2.935s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description//urdf/common_properties.urdf.xacro
+[2.936s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description//urdf/lidar.xacro
+[2.966s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description//urdf/mobile_base.urdf.xacro
+[2.977s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description//urdf/mobile_base_gazebo.xacro
+[2.978s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description//urdf/my_robot.urdf.xacro
+[2.980s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description//launch/display.launch.xml
+[2.982s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description//rviz/urdf_config.rviz
+[2.983s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/ament_index/resource_index/package_run_dependencies/my_robot_description
+[2.985s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/ament_index/resource_index/parent_prefix_path/my_robot_description
+[2.986s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.sh
+[2.987s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/environment/ament_prefix_path.dsv
+[2.988s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/environment/path.sh
+[2.989s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/environment/path.dsv
+[2.990s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/local_setup.bash
+[2.991s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/local_setup.sh
+[2.992s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/local_setup.zsh
+[2.993s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/local_setup.dsv
+[2.993s] -- Symlinking: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/package.dsv
+[3.020s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/ament_index/resource_index/packages/my_robot_description
+[3.021s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig.cmake
+[3.021s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/cmake/my_robot_descriptionConfig-version.cmake
+[3.022s] -- Up-to-date symlink: /home/youssef/Documents/ROS/ros2_new_ws/install/my_robot_description/share/my_robot_description/package.xml
+[3.026s] Invoked command in '/home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/youssef/install/my_py_pkg:/home/youssef/Documents/ROS/ros2_ws/install/my_py_pkg:/opt/ros/humble /usr/bin/cmake --install /home/youssef/Documents/ROS/ros2_new_ws/build/my_robot_description
