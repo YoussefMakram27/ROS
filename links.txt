@@ -9,3 +9,9 @@ Gazebo Plugins GitHub:
 	
 Gazebo Plugins Docs:
 	https://classic.gazebosim.org/tutorials?tut=ros_gzplugins			
+	
+	https://github.com/ros-simulation/gazebo_ros_pkgs/blob/kinetic-devel/gazebo_plugins/test/test_worlds/gazebo_ros_range.world#L82
+	
+	https://github.com/jondurrant/DDD-Exp
+	
+	https://github.com/ros-simulation/gazebo_ros_pkgs/wiki/ROS-2-Migration:-Ray-sensors#overview

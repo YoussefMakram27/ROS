@@ -12,7 +12,10 @@
     <material name = "red">
         <color rgba = "1 0 0 1"></color>
     </material>
-    
+
+    <material name = "green">
+        <color rgba = "0 1 0 1"></color>
+    </material>    
 
     <xacro:macro name="box_inertia" params="m l w h xyz rpy">
         <inertial>
