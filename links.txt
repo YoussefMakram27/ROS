@@ -15,3 +15,9 @@ Gazebo Plugins Docs:
 	https://github.com/jondurrant/DDD-Exp
 	
 	https://github.com/ros-simulation/gazebo_ros_pkgs/wiki/ROS-2-Migration:-Ray-sensors#overview
+	
+	https://github.com/OpenPi-bot/robot-simulation/blob/sensor/fb_description/urdf/fb.gazebo
+	
+	
+UltraSonic:
+	https://automaticaddison.com/how-to-add-ultrasonic-sensors-to-an-sdf-file-for-gazebo/	
