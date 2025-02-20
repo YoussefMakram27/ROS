@@ -1,0 +1,26 @@
+          Start a world with turtlebot3
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+
+          Make the robot move with keyboard
+ros2 run turtlebot3_teleop teleop_keyboard 
+
+          Contain SLAM for turtlebot3 (launching rviz)
+ros2 launch turtlebot3_cartographer  cartographer.launch.py use_sim_time:=True
+
+          Save the map
+ros2 run nav2_map_server map_saver_cli -f my_map
+
+	  Use the navigation
+ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:=Maps/my_map.yaml 
+
+===========================================
+          For Mapping wiht Slam Toolbox
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=True
+ros2 launch slam_toolbox online_async_launch.py use_sim_time:=True
+rviz2
+ros2 run turtlebot3_teleop teleop_keyboard 
+ros2 run nav2_map_server map_saver_cli -f Documents/ROS/Maps/new_map1
+
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+ros2 launch nav2_bringup bringup_launch.py use_sim_time:=True map:=Documents/ROS/Maps/new_map1.yaml
