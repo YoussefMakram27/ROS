@@ -199,9 +199,12 @@ ros2 run rviz2 rviz2
 </launch>
 =========================
 ########################Spawn the robot in gazebo
-1. ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(xacro /home/	 	 youssef/Documents/ROS/Robot/my_robot.urdf)"
-2. ros2 launch gazebo_ros gazebo.laucnh.py
+1. ros2 run robot_state_publisher robot_state_publisher --ros-args -p robot_description:="$(xacro /home/youssef/Documents/ROS/ros2_new_ws/src/my_robot_description/urdf/my_robot.urdf.xacro)"
+2. ros2 launch gazebo_ros gazebo.launch.py
 3. ros2 run gazebo_ros spawn_entity.py -topic robot_description -entity my_robot
+=========================
+
+****************ros2 launch urdf_tutorial display.launch.py model:=/home/youssef/Documents/ROS/ros2_new_ws/src/my_robot_description/urdf/my_robot.urdf.xacro
 
 =========================
 ros2 topic info /cmd_vel

@@ -20,4 +20,8 @@ Gazebo Plugins Docs:
 	
 	
 UltraSonic:
-	https://automaticaddison.com/how-to-add-ultrasonic-sensors-to-an-sdf-file-for-gazebo/	
+	https://automaticaddison.com/how-to-add-ultrasonic-sensors-to-an-sdf-file-for-gazebo/
+	
+	https://github.com/mataruzz/libHCSR04
+	
+	https://wiki.ros.org/Drivers/Tutorials/WritingYourHC-SR04DriverPython	
